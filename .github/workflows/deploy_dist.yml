@@ -1,3 +1,4 @@
+name: Deploy Distribution Workflow
 on:
     push:
         branches:
