@@ -6,7 +6,7 @@ on:
             - feature/*
         paths-ignore:
             - '**.md'
-            - '.github/workflows/deploy_dist.yml'
+            - 'docs/**'
     workflow_dispatch:
 jobs:
     test:
@@ -43,6 +43,8 @@ jobs:
               with:
                 node-version: 20
                 cache: 'npm'
+            - name: install dependencies
+              run: npm ci
             - name: build project
               run: npm run build
 
